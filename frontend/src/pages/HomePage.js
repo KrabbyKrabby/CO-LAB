@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './HomePage.module.css'
+import styles from './CSS/HomePage.module.css'
 import image1 from '../assets/lets build together text.png'
 import image2 from '../assets/Saly-13.png'
 import arrow from '../assets/arrow_sign.png'
