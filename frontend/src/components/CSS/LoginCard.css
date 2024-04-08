@@ -1,0 +1,60 @@
+.login-card {
+    height: 600px;
+    width: 100%;
+    max-width: 400px; /* Adjust the width as needed */
+    padding: 40px;
+    background-color: #232E4E; /* Adjusted the color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form input {
+    padding: 15px;
+    border: none;
+    background-color: #1C253C; /* Adjusted the color */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Adjusted spacing */
+    color: white;
+  }
+  
+  .login-button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5865F2; /* Adjusted the color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #4B5AC7; /* Darken the button color on hover */
+  }
+  
+  .login-text {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .login-link, .account-link {
+    color: #4C9AFF; /* Adjusted the color */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link:hover, .account-link:hover {
+    text-decoration: underline;
+  }
+  

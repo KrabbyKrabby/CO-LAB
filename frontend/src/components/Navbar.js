@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import './CSS/Navbar.css'
 import logo from '../assets/colab_logo.png'
 
 
