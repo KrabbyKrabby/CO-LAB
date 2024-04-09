@@ -10,8 +10,10 @@ const LoginCard = () => {
   return (
     <div className="login-card">
       <form className="login-form" onSubmit={handleLogin}>
-        <input type="text" id="username" placeholder="Username / Email" />
-        <input type="password" id="password" placeholder="Password" />
+        <h3>Username/Email</h3>
+        <input type="text" id="username" />
+        <h3>Password</h3>
+        <input type="password" id="password" />
         <button type="submit" className="login-button">LOGIN</button>
       </form>
       <div className="login-text">

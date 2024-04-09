@@ -1,17 +1,18 @@
 .login-card {
+    margin-top: 10%;
     height: 600px;
     width: 100%;
     max-width: 400px; /* Adjust the width as needed */
     padding: 40px;
-    background-color: #232E4E; /* Adjusted the color */
-    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.3);
+    border-radius: 17px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
   
   .login-form {
@@ -21,22 +22,27 @@
   }
   
   .login-form input {
+    margin-top: 2%;
     padding: 15px;
     border: none;
-    background-color: #1C253C; /* Adjusted the color */
-    border-radius: 5px;
+    background: rgba(247, 241, 241, 0.32);
+    border-radius: 20px;
     margin-bottom: 20px; /* Adjusted spacing */
     color: white;
   }
   
   .login-button {
-    padding: 15px;
+    margin-top: 5%;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #5865F2; /* Adjusted the color */
+    background: rgba(217, 217, 217, 0.3);
+    border-radius: 17px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
+    align-self: center;
+    width: 45%;
+    
   }
   
   .login-button:hover {
