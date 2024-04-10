@@ -12,9 +12,19 @@
 
 .image1{
     margin-top: 250px;
+    margin-bottom: 20px;
 }
 .image2{
     margin-top: 250px;
+    margin-bottom: 20px;
+}
+.image3{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.image4{
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .button-container {
@@ -37,4 +47,12 @@
 .btn img{
     width: 25px;
     margin: 5px;
+}
+
+.CommunityPreview{
+    margin-top: 100px;
+}
+
+h4{
+    color: white;
 }

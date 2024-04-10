@@ -7,8 +7,9 @@ import ProfileTab from './components/ProfileTab';
 function App() {
   return (
     <div className="App">
-      <ProfileTab/>
-     <SignupPage/>
+      <HomePage/>
+      {/* <ProfileTab/>
+     <SignupPage/> */}
       {/* <LoginPage/> */}
     </div>
   );
