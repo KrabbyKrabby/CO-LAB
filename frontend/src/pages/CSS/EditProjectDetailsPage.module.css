@@ -1,0 +1,29 @@
+body{
+  margin-top: 200px;
+}
+
+h1{
+  color: white;
+  margin-bottom: 50px;
+}
+
+.ProjectDetailsButton {
+  padding: 15px;
+  margin-top: 50px;
+  border: none;
+  background: rgba(235, 227, 227, 0.179);
+  border-radius: 17px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transform and box-shadow to transition */
+  align-self: center;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ProjectDetailsButton:hover {
+  background-color: #7a6ffd; 
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(122, 111, 253, 0.6);
+}

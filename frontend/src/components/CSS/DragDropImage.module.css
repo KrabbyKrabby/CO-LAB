@@ -1,0 +1,111 @@
+.DragDropImageCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    height: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 0 5px #7a6ffd;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.DragDropImageCard::-webkit-scrollbar {
+    display: none; 
+}
+
+.DragDropTop{
+    text-align: center;
+}
+
+.DragDropImageCard button{
+    outline: 0;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 8px 13px;
+    width: 100%;
+    background: #7a6ffd;
+    margin: 10px;
+}
+
+.DragDropImageCard .drag_area{
+    height: 300px;
+    width: 450px;
+    border-radius: 5px;
+    border: 2px dashed #7a6ffd;
+    color: #7a6ffd;
+    background: rgba(235, 227, 227, 0.088);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: 20px;
+}
+
+.DragDropImageCard .drag_area .visible{
+    font-size: 16px;
+}
+
+.DragDropImageCard .DDSelect{
+    color: #5256ad;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.DragDropImageCard .DDSelect:hover{
+    opacity: 0.6;
+}
+
+.DragDropImageCard .DDContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.DragDropImageCard .DDContainer .DDImage{
+    width: 75px;
+    margin-right: 5px;
+    height: 75px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.DragDropImageCard .DDContainer .DDImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.DragDropImageCard .DDContainer .DDImage span{
+    position: absolute;
+    top: -2px;
+    right: 9px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.DragDropImageCard input,
+.DragDropImageCard .drag_area .on-drop,
+.DragDropImageCard .drag_area.dragover .visible{
+    display: none;
+}
+
+.DDDelete{
+    z-index: 999;
+    color: #7a6ffd;
+}

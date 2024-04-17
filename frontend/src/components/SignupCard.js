@@ -1,10 +1,10 @@
 import React from 'react';
-import './CSS/SignupCard.css'; // Make sure this CSS file exists
+import './CSS/SignupCard.css';
 
 const SignupCard = () => {
   const handleSignup = (event) => {
     event.preventDefault();
-    // Implement your signup logic here
+    
   };
 
   return (

@@ -3,16 +3,9 @@
     margin-bottom: 100px;
     display: flex;
     overflow-x: auto;
-    scrollbar-width: none; /* For Firefox */
-    -ms-overflow-style: none; /* For Internet Explorer 10+ */
     justify-content: flex-start;
     flex-wrap: nowrap; 
   }
-  
-.ProfileShowcaseCard::-webkit-scrollbar {
-   display: none; /* For Chrome, Safari, and Opera */
-}
-
 
 body{
     display: flex;
@@ -25,10 +18,7 @@ body{
 .ProfileShowcaseCard {
     position: relative;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-    /* width: 350px;
-    height: 350px; */
     flex-wrap: wrap;
     z-index: 1;
     color: rgb(255, 255, 255);
