@@ -20,16 +20,16 @@
     object-fit: cover; /* Ensures the image covers the area without stretching */
   }
   
-  .card h3 {
-    color: #000;
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-  
-  .card p {
-    color: #333;
-    font-size: 16px;
-  }
+    .project_card h3 {
+        font-size: 24px;
+        margin-bottom: 16px;
+        margin-left: 5%;
+    }
+
+    .project_card p {
+        font-size: 16px;
+        margin-left: 5%;
+    }
 
   .card img{
     width: 70%;

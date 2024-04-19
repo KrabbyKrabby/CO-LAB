@@ -4,7 +4,7 @@ import profilePicture from '../assets/profilepicture.png'; // Adjust path as nee
 import starIcon from '../assets/star.png'; // Adjust path as needed
 import peopleIcon from '../assets/twopeople.png'; // Adjust path as needed
 
-const ProfileTab = () => {
+const ProfileTab = ({ onTabSelect }) => {
     return (
       <div className={styles.profile_tab}>
         <div className={styles.profile_info}>
@@ -16,9 +16,9 @@ const ProfileTab = () => {
               <img src={peopleIcon} alt="People" className={styles.icon} />
             </div>
             <div className={styles.profile_buttons}>
-              <button className={styles.tab_button}>Profile Overview</button>
-              <button className={styles.tab_button}>Projects</button>
-              <button className={styles.tab_button}>Blogs</button>
+              <button className={styles.tab_button} onClick={() => onTabSelect(1)}>Profile Overview</button>
+              <button className={styles.tab_button} onClick={() => onTabSelect(2)}>Projects</button>
+              <button className={styles.tab_button} onClick={() => onTabSelect(3)}>Blogs</button>
             </div>
           </div>
         </div>
