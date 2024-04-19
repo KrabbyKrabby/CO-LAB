@@ -1,0 +1,23 @@
+.videoContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 videos */
+    overflow: hidden;
+  }
+  
+  .videoIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .errorMessage {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
