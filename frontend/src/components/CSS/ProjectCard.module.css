@@ -1,0 +1,40 @@
+/* ProjectCard.css */
+.project_card {
+    width: calc(50% - 40px); /* Adjust the width to fit two cards per row with spacing */
+    height: auto; /* Height can be auto for flexibility */
+    background: rgba(217, 217, 217, 0.75);
+    border-radius: 32px;
+    margin: 20px; /* This adds space around the card */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .project_image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    width: 90%;
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+  }
+  
+  .card h3 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .card p {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .card img{
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+  }
+  
+  
