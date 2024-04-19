@@ -1,7 +1,6 @@
 .login_card {
     margin-top: 7%;
     height: 550px;
-    width: 500px;
     /* max-width: 400px;  */
     padding: 30px;
     background: rgba(217, 217, 217, 0.22);
@@ -12,6 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
     gap: 20px;
   }
   
@@ -58,8 +58,7 @@
     color: #78abed; 
     text-decoration: none;
     font-weight: bold;
-    background-color: #9aa4f06e;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    background: rgba(217, 217, 217, 0.22);
   }
   
   .login_link:hover, .account_link:hover {
@@ -67,6 +66,5 @@
     color: black;
     background: #7b6ffd77;
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(122, 111, 253, 0.6);
   }
   
