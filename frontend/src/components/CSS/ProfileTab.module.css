@@ -1,4 +1,4 @@
-.profile-tab {
+.profile_tab {
     margin-top: 7%;
     background-color: #0D0D21;
     border-radius: 20px;
@@ -12,49 +12,49 @@
     -ms-overflow-style: none; 
   }
 
-  .profile-tab::-webkit-scrollbar {
+  .profile_tab::-webkit-scrollbar {
     display: none; 
  }
   
-  .profile-info {
+  .profile_info {
     display: flex;
     align-items: center;
     width: 100%;
     flex-direction: row;
   }
   
-  .name-and-buttons {
+  .name_and_buttons {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
   
-  .profile-picture {
+  .profile_picture {
     width: 80px;
     height: 80px;
     border-radius: 50%;
     margin-right: 1rem;
   }
   
-  .profile-name {
+  .profile_name {
     color: white;
     margin-bottom: 0.5rem;
   }
   
-  .profile-buttons {
+  .profile_buttons {
     display: flex;
     justify-content: space-between;
     width: 650px;
     height: 40px;
   }
 
-  .profile-tab-top{
+  .profile_tab_top{
     display: flex;
     align-items: center;
 
   }
   
-  .tab-button {
+  .tab_button {
     background-color: #666;
     border: none;
     padding: 0.5rem 1rem;
@@ -66,11 +66,11 @@
     width: 30%;
   }
   
-  .tab-button:hover {
+  .tab_button:hover {
     background-color: #555;
   }
   
-  .profile-icons {
+  .profile_icons {
     display: flex;
     align-items: center;
   }

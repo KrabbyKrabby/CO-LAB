@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from '../components/Navbar'; // Assume Navbar is a component you have
+import Navbar from '../components/Navbar'; 
 import SignupCard from '../components/SignupCard';
-import './CSS/SignupPage.css'; // Make sure to create this CSS file
+import styles from './CSS/SignupPage.module.css'; 
 
 const SignupPage = () => {
   return (
-    <div className="signup-page-container">
+    <div className={styles.signup_page_container}>
       <Navbar/>
       <SignupCard/>
     </div>

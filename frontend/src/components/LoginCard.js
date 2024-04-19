@@ -1,26 +1,26 @@
 import React from 'react';
-import './CSS/LoginCard.css'; // Import the CSS stylesheet
+import styles from './CSS/LoginCard.module.css'; 
 
 const LoginCard = () => {
   const handleLogin = (event) => {
     event.preventDefault();
-    // Implement your login logic here
+    
   };
 
   return (
-    <div className="login-card">
-      <form className="login-form" onSubmit={handleLogin}>
-        <h3>Username/Email</h3>
+    <div className={styles.login_card}>
+      <form className={styles.login_form} onSubmit={handleLogin}>
+        <h4>Username/Email</h4>
         <input type="text" id="username" />
-        <h3>Password</h3>
+        <h4>Password</h4>
         <input type="password" id="password" />
-        <button type="submit" className="login-button">LOGIN</button>
+        <button type="submit" className={styles.login_button}>LOGIN</button>
       </form>
-      <div className="login-text">
-        Forgot Password? <a href="#" className="login-link">Click here :)</a>
+      <div className={styles.login_text}>
+        Forgot Password? <a href="#" className={styles.login_link}>Click here :)</a>
       </div>
-      <div className="login-text">
-        Do not have account? <a href="#" className="account-link">Create an account!</a>
+      <div className={styles.login_text}>
+        Do not have account? <a href="#" className={styles.account_link}>Create an account!</a>
       </div>
     </div>
   );

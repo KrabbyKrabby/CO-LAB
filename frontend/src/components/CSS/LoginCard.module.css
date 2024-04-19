@@ -1,10 +1,10 @@
-.login-card {
+.login_card {
     margin-top: 7%;
-    height: 600px;
-    width: 100%;
-    max-width: 400px; /* Adjust the width as needed */
-    padding: 40px;
-    background: rgba(217, 217, 217, 0.3);
+    height: 550px;
+    width: 500px;
+    /* max-width: 400px;  */
+    padding: 30px;
+    background: rgba(217, 217, 217, 0.22);
     border-radius: 17px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #ffffff;
@@ -12,26 +12,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
   }
   
-  .login-form {
+  .login_form {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
   
-  .login-form input {
+  .login_form input {
     margin-top: 2%;
-    padding: 15px;
+    padding: 10px;
     border: none;
-    background: rgba(247, 241, 241, 0.32);
+    background: rgba(247, 241, 241, 0.23);
     border-radius: 20px;
-    margin-bottom: 20px; /* Adjusted spacing */
+    margin-bottom: 25px; 
     color: white;
   }
   
-  .login-button {
+  .login_button {
     margin-top: 5%;
     padding: 10px;
     border: none;
@@ -45,22 +45,28 @@
     
   }
   
-  .login-button:hover {
+  .login_button:hover {
     background-color: #4B5AC7; /* Darken the button color on hover */
   }
   
-  .login-text {
+  .login_text {
     text-align: center;
     font-size: 0.9rem;
   }
   
-  .login-link, .account-link {
-    color: #4C9AFF; /* Adjusted the color */
+  .login_link, .account_link {
+    color: #78abed; /* Adjusted the color */
     text-decoration: none;
     font-weight: bold;
+    background-color: #9aa4f06e;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; 
   }
   
-  .login-link:hover, .account-link:hover {
+  .login_link:hover, .account_link:hover {
     text-decoration: underline;
+    color: black;
+    background: #7b6ffd77;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(122, 111, 253, 0.6);
   }
   

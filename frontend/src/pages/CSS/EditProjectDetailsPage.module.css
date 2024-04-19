@@ -10,12 +10,13 @@ h1{
 .ProjectDetailsButton {
   padding: 15px;
   margin-top: 50px;
+  margin-bottom: 100px;
   border: none;
   background: rgba(235, 227, 227, 0.179);
   border-radius: 17px;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transform and box-shadow to transition */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; 
   align-self: center;
   width: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

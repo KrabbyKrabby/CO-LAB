@@ -33,6 +33,16 @@
     width: 100%;
     background: #7a6ffd;
     margin: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.DragDropImageCard button:hover{
+    color: black;
+    background: #7a6ffd;
+    transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(122, 111, 253, 0.6);
+    
 }
 
 .DragDropImageCard .drag_area{
@@ -108,4 +118,9 @@
 .DDDelete{
     z-index: 999;
     color: #7a6ffd;
+}
+
+.DDDelete:hover{
+    z-index: 999;
+    color: #01000b;
 }
