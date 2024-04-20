@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import VanillaTilt from 'vanilla-tilt';
 import styles from '../components/CSS/CommunityCard.module.css';
 import image1 from '../assets/React_logo.png'
@@ -6,6 +6,8 @@ import image2 from '../assets/python_logo.png'
 import image3 from '../assets/java_logo.png'
 
 const CommunityCard = () => {
+
+  const sliderRef = useRef(null);
 
   useEffect(() => {
     // Initialize Vanilla Tilt for each element with the class name "ComCard"
@@ -24,8 +26,35 @@ const CommunityCard = () => {
     };
   }, []); // Run this effect only once after the component is mounted
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const slider = sliderRef.current;
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY + windowHeight;
+
+      const sliderTop = slider.offsetTop;
+      const sliderBottom = sliderTop + slider.offsetHeight;
+
+      // Calculate the opacity based on scroll position
+      const opacity = (scrollPosition - sliderTop) / (sliderBottom - sliderTop);
+
+      // Set opacity to slider
+      slider.style.opacity = opacity;
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup: Remove the scroll event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
   return (
-    <div className={styles.CommunityCardSlider}>
+    <div className={styles.CommunityCardSlider} ref={sliderRef}>
       <div className={styles.ComCard}>
         <div className={styles.ComCardImg}>
           <img src={image1} alt="" className={styles.image1}/>

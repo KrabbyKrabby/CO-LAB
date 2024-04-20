@@ -8,11 +8,11 @@ import EditProjectDetailsPage from './pages/EditProjectDetailsPage';
 function App() {
   return (
     <div className="App">
-      {/* <HomePage/> */}
+      <HomePage/>
       {/* <ProfileTab/> */}
      {/* <SignupPage/> */}
       {/* <LoginPage/> */}
-      <EditProjectDetailsPage/>
+      {/* <EditProjectDetailsPage/> */}
     </div>
   );
 }

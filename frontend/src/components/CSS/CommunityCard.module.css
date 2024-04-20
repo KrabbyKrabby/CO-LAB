@@ -7,6 +7,9 @@
     -ms-overflow-style: none; 
     justify-content: flex-start;
     flex-wrap: nowrap; 
+
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
   }
   
 .CommunityCardSlider::-webkit-scrollbar {
@@ -24,10 +27,7 @@ body{
 .CommunityCardSlider {
     position: relative;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
-    /* width: 350px;
-    height: 350px; */
     flex-wrap: wrap;
     z-index: 1;
     color: rgb(255, 255, 255);
