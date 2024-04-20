@@ -1,7 +1,7 @@
 .signup_card {
     margin-top: 7%;
     height: auto; /* Adjust based on content */
-    width: 500px;
+    width: 100%;
     /* max-width: 600px; */
     padding: 40px;
     background: rgba(217, 217, 217, 0.22);

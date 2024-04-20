@@ -1,0 +1,31 @@
+.mainuserpage_container {
+    background-color: #0f112e;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center the children along the cross axis */
+    justify-content: flex-start; /* This will align the children at the start of the main axis */
+    min-height: 100vh; /* This makes sure your container fills the whole viewport height */
+}
+
+.blog_card_container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.project_card_container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.profile_card_container{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}

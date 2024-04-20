@@ -4,15 +4,17 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProfileTab from './components/ProfileTab';
 import EditProjectDetailsPage from './pages/EditProjectDetailsPage';
+import MainUserPage from './pages/MainUserPage';
 
 function App() {
   return (
     <div className="App">
       <HomePage/>
       {/* <ProfileTab/> */}
-     {/* <SignupPage/> */}
-      {/* <LoginPage/> */}
+     {/* <SignupPage/>
+      <LoginPage/> */}
       {/* <EditProjectDetailsPage/> */}
+      <MainUserPage/>
     </div>
   );
 }

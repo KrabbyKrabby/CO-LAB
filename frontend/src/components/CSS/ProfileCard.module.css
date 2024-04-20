@@ -1,0 +1,55 @@
+/* ProfileCard.css */
+.profile_card {
+    width: calc(80% - 40px);
+    border-radius: 20px;
+    color: white;
+    margin: 20px;
+    overflow: hidden; /* Keeps children within the border radius */
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Add padding as needed */
+    cursor: pointer; /* Indicates the header is clickable */
+}
+
+.profile_info{
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.profile_header h2 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+    padding-left: 10px; /* Space after the white dot */
+}
+
+.title{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.white_dot {
+    /* Size as needed */
+    width: 24px;
+    height: 24px;
+}
+
+.down_arrow {
+    /* Size as needed */
+    width: 24px;
+    height: 24px;
+}
+
+.profile_content {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(217, 217, 217, 0.75);
+    border-radius: 32px;
+}
+
+
