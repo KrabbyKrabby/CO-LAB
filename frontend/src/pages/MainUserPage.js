@@ -16,7 +16,6 @@ const HomePage = () => {
         <Navbar/>
         <ProfileTab onTabSelect={setSelectedTab}/>
 
-
         {selectedTab === 1 && (
           <div className={style.profile_card_container}>
               <ProfileCard title='Bio'/>
@@ -42,7 +41,6 @@ const HomePage = () => {
               <BlogCard title='Blog Title 4' description='Blog Description 4'/>
           </div>
         )}  
-        
     </div>
   );
 }

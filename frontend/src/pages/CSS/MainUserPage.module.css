@@ -1,4 +1,5 @@
 .mainuserpage_container {
+    width: 800px;
     background-color: #0f112e;
     display: flex;
     flex-direction: column;
