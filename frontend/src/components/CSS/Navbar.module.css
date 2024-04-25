@@ -1,0 +1,145 @@
+.navbar{
+    width: 100%;
+    /* background: #0f112e; */
+    color: #fff;
+    padding: 2px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+
+}
+.logo{
+    width: 150px;
+}
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 5px 20px;
+    font-size: 16px;
+}
+
+.navBtn  {
+    background: #0f112e;
+    color: #ffffff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.navBtn:hover {
+    background-color: #5f64e8c4;
+    color: black;
+}
+
+.navBtn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.loginBtn  {
+    background: #0f112e;
+    color: #ffffff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.loginBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.loginBtn:hover {
+    background-color: #5f64e8c4;
+    color: black;
+}
+
+.loginBtn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.signupBtn  {
+    background: #0f112e;
+    color: #ffffff;
+    padding: 14px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.signupBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.125);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease-in-out;
+    pointer-events: none;
+}
+
+.signupBtn:hover {
+    background-color: #5f64e8c4;
+    color: black;
+}
+
+.signupBtn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}

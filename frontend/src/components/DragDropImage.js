@@ -111,7 +111,7 @@ const DragDropImage = () => {
                 ))}
             </div>
             {/* Upload button */}
-            <button type='button' onClick={uploadImage}>
+            <button type={styles.button} onClick={uploadImage}>
                 Upload
             </button>
         </div>
