@@ -1,12 +1,13 @@
 /* ProfileCard.css */
 .profile_card {
-    width: calc(80% - 40px);
+    width: calc(90% - 10px);
     border-radius: 20px;
     color: white;
     margin: 20px;
     overflow: hidden; /* Keeps children within the border radius */
     display: flex;
     flex-direction: column;
+
 }
 
 .profile_header {
@@ -18,15 +19,18 @@
 }
 
 .profile_info{
+    width: 100%;
+    padding: 10px;
     word-wrap: break-word;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .profile_header h2 {
+    width: 100%;
     flex-grow: 1;
     text-align: left;
     margin: 0;
-    padding-left: 10px; /* Space after the white dot */
+    padding: 10px; /* Space after the white dot */
 }
 
 .title{
@@ -46,10 +50,17 @@
 }
 
 .profile_content {
-    width: 100%;
-    max-width: 400px;
+    align-self: center;
+    width: 90%;
     background: rgba(217, 217, 217, 0.75);
-    border-radius: 32px;
+    border-radius: 12px;
+}
+
+.edit_icon{
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: aliceblue;
 }
 
 

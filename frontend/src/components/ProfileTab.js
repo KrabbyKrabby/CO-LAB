@@ -3,8 +3,10 @@ import styles from  './CSS/ProfileTab.module.css'; // Make sure to have this CSS
 import profilePicture from '../assets/profilepicture.png'; // Adjust path as needed
 import starIcon from '../assets/star.png'; // Adjust path as needed
 import peopleIcon from '../assets/twopeople.png'; // Adjust path as needed
+import whiteDownArrow from '../assets/white-down-arrow.png'; // Adjust path as needed
+import whiteUpArrow from '../assets/white-up-arrow.png'; // Adjust path as needed
 
-const ProfileTab = ({ onTabSelect }) => {
+const ProfileTab = ({ onTabSelect,selectedTab }) => {
     return (
       <div className={styles.profile_tab}>
         <div className={styles.profile_info}>
@@ -16,9 +18,9 @@ const ProfileTab = ({ onTabSelect }) => {
               <img src={peopleIcon} alt="People" className={styles.icon} />
             </div>
             <div className={styles.profile_buttons}>
-              <button className={styles.tab_button} onClick={() => onTabSelect(1)}>Profile Overview</button>
-              <button className={styles.tab_button} onClick={() => onTabSelect(2)}>Projects</button>
-              <button className={styles.tab_button} onClick={() => onTabSelect(3)}>Blogs</button>
+              <button className={`${styles.tab_button} ${selectedTab === 1 ? styles.selected : ''}`} onClick={() => onTabSelect(1)}>Profile Overview</button>
+              <button className={`${styles.tab_button} ${selectedTab === 2 ? styles.selected : ''}`} onClick={() => onTabSelect(2)}>Projects</button>
+              <button className={`${styles.tab_button} ${selectedTab === 3 ? styles.selected : ''}`} onClick={() => onTabSelect(3)}>Blogs</button>
             </div>
           </div>
         </div>

@@ -11,10 +11,11 @@ const HomePage = () => {
 
   const [selectedTab, setSelectedTab] = useState(1);
 
+
   return (
     <div className={style.mainuserpage_container}>
         <Navbar/>
-        <ProfileTab onTabSelect={setSelectedTab}/>
+        <ProfileTab onTabSelect={setSelectedTab} selectedTab={selectedTab}/>
 
         {selectedTab === 1 && (
           <div className={style.profile_card_container}>

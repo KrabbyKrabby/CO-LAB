@@ -1,27 +1,26 @@
 /* BlogCard.css */
 .blog_card {
-    width: calc(50% - 40px); /* Adjust the width to fit two cards per row with spacing */
+    width: 47%; /* Adjust the width to fit two cards per row with spacing */
     height: auto; /* Height can be auto for flexibility */
     background: rgba(217, 217, 217, 0.75);
     border-radius: 32px;
-    margin: 20px; /* This adds space around the card */
+    margin: 10px; /* This adds space around the card */
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: left;
     text-align: left;
   }
   
-  .card h3 {
-    color: #000;
+  .blog_card h3 {
     font-size: 24px;
     margin-bottom: 16px;
+    margin-left: 5%;
   }
   
-  .card p {
-    color: #333;
+  .blog_card p {
     font-size: 16px;
+    margin-left: 5%;
   }
   
   

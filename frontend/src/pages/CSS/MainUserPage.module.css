@@ -2,6 +2,7 @@
     width: 800px;
 
     background-color: #0f112e;
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     align-items: center; /* This will center the children along the cross axis */
@@ -10,7 +11,7 @@
 }
 
 .blog_card_container{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -31,3 +32,4 @@
     flex-wrap: wrap;
     padding: 20px;
 }
+

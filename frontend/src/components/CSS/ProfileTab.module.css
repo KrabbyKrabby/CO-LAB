@@ -65,9 +65,13 @@
     transition: background-color 0.3s;
     width: 30%;
   }
+
+  .tab_button.selected, .tab_button:active {
+    background-color: #9d9393; /* Darker shade for selected/active state */
+}
   
   .tab_button:hover {
-    background-color: #555;
+    background-color: #9d9393; /* Darker shade for selected/active state */
   }
   
   .profile_icons {

@@ -6,7 +6,6 @@ const ProjectCard = ({ title, description, imageUrl }) => {
         <div className={style.project_card}>
           <h3>{title}</h3>
           <p>{description}</p>
-          <img src={imageUrl  || 'https://via.placeholder.com/150'} alt='project' className={style.project_image}/>
         </div>
       );
 }

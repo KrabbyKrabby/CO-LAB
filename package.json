@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "react-scripts": "^5.0.1",
     "vanilla-tilt": "^1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node your-main-file.js"
   }
+  
 }
