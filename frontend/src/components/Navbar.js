@@ -20,6 +20,8 @@ const Navbar = () => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
   return (
     <nav className='container'>
       <img src={logo} alt="" className='logo'/>
