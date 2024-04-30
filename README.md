@@ -7,3 +7,4 @@ npm install vanilla-tilt
 npm install react
 npm install react-dom
 npm install
+npm install react-markdown
