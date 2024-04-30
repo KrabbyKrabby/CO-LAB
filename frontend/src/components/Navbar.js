@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className={styles.navbar} 
     style={{ backgroundColor: scrollPosition > 20 ? '#0f112e' : 'transparent' }}
     >
-      <img src={logo} alt="" className={styles.logo}/>
+      <img src={logo} alt="" className={styles.logo} onClick={ () => navigate('/') }/>
       <ul>
         <li><button className={styles.navBtn} onClick={() => navigate('/')}>Home</button></li>
         <li><button className={styles.navBtn} >Community</button></li>

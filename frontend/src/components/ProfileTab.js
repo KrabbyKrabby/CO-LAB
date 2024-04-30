@@ -3,8 +3,6 @@ import styles from  './CSS/ProfileTab.module.css'; // Make sure to have this CSS
 import profilePicture from '../assets/profilepicture.png'; // Adjust path as needed
 import starIcon from '../assets/star.png'; // Adjust path as needed
 import peopleIcon from '../assets/twopeople.png'; // Adjust path as needed
-import whiteDownArrow from '../assets/white-down-arrow.png'; // Adjust path as needed
-import whiteUpArrow from '../assets/white-up-arrow.png'; // Adjust path as needed
 
 const ProfileTab = ({ onTabSelect,selectedTab }) => {
     return (

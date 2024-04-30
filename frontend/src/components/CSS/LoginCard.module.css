@@ -56,15 +56,13 @@
   
   .login_link, .account_link {
     color: #78abed; 
-    text-decoration: none;
     font-weight: bold;
-    background: rgba(217, 217, 217, 0.22);
+    background: rgba(148, 134, 134, 0.22);
   }
   
   .login_link:hover, .account_link:hover {
     text-decoration: underline;
     color: black;
-    background: #7b6ffd77;
     transform: translateY(-3px);
   }
   

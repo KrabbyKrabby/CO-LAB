@@ -63,4 +63,18 @@
     background-color: aliceblue;
 }
 
+.profile_textarea {
+    width: 100%; /* Ensures it fills the container */
+    height: auto; /* Initially set to auto */
+    padding: 10px; /* Padding for text inside textarea */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline to avoid focus highlight */
+    overflow: hidden; /* Prevents scroll bar appearance */
+    resize: none; /* Disables resize handle */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    background: rgba(247, 241, 241, 0.23); /* Background to match other inputs */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+}
+
 
