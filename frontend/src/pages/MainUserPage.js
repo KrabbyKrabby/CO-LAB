@@ -5,6 +5,7 @@ import ProfileTab from '../components/ProfileTab';
 import BlogCard from '../components/BlogCard';
 import ProjectCard from '../components/ProjectCard';
 import ProfileCard from '../components/ProfileCard';
+import TechStackInput from '../components/TechStackInput'; 
 
 
 const HomePage = () => {
@@ -19,9 +20,9 @@ const HomePage = () => {
 
         {selectedTab === 1 && (
           <div className={style.profile_card_container}>
-              <ProfileCard title='Bio'/>
-              <ProfileCard title='Tech Stack'/>
-              <ProfileCard title='Experience'/>
+              <ProfileCard title='Bio' ProfileInfo='Hello I am great'/>
+              <ProfileCard title='Tech Stack' TechStack={TechStackInput}/>
+              <ProfileCard title='Experience' ProfileInfo='Hello I am great'/>
           </div>
         )}
 

@@ -1,0 +1,69 @@
+.tag {
+    background-color: rgb(243, 236, 236);
+    border: 2px solid #ccc;
+    color: black;
+    font-size: 1rem;
+    padding: 0.1rem;
+    margin: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.remove_tag {
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+}
+
+.editable_input {
+    background-color: #282c34;
+    border: none;
+    color: white;
+    outline: none;
+    padding: 0.5rem;
+    flex-grow: 1;
+    min-width: 50px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 97%;
+    background-color: #282c34;
+    padding: 0.2rem;
+    border: 2px solid #ccc;
+
+}
+
+.tag_input {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 52vh; /* Adjust based on your requirements */
+    height: 200px;
+    overflow: auto;
+    padding: 0.5rem;
+    
+}
+
+.matches {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 150px; /* Adjust based on your needs */
+    background-color: #4d4646;
+    width: 98.9%;
+    border: 1px solid #ccc;
+}
+
+.matches li {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.matches li:hover {
+    background-color: #857979;
+}

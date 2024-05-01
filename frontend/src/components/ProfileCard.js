@@ -7,10 +7,10 @@ import pen from '../assets/pen.png';
 import saveIcon from '../assets/done.png';  // Assuming you have a save icon in your assets
 import ReactMarkdown from 'https://esm.sh/react-markdown@9'
 
-const ProfileCard = ({ title }) => {
+const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
-    const [profileInfo, setProfileInfo] = useState("Hello I am doing great. How have you been? Are you alright? I hope you are dead. Okay, goodbye goodnight.");
+    const [profileInfo, setProfileInfo] = useState(ProfileInfo);
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -46,9 +46,11 @@ const ProfileCard = ({ title }) => {
                 }
             </div>
             {isVisible && (
-                <div className={style.profile_content}>
-                        {isEditing ? (<textarea value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea} />) : ( <ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
-                </div>
+                ProfileInfo ? (
+                    <div className={style.profile_content}>
+                        {isEditing ? (<textarea value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea} />) : (<ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
+                    </div>
+                ) : (TechStack && <TechStack />)
             )}
         </div>
     );
