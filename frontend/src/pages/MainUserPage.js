@@ -7,7 +7,6 @@ import ProjectCard from '../components/ProjectCard';
 import ProfileCard from '../components/ProfileCard';
 import TechStackInput from '../components/TechStackInput'; 
 
-
 const HomePage = () => {
 
   const [selectedTab, setSelectedTab] = useState(1);

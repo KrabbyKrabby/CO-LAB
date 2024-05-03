@@ -5,7 +5,7 @@ import image1 from '../assets/React_logo.png'
 import image2 from '../assets/python_logo.png'
 import image3 from '../assets/java_logo.png'
 
-const CommunityCard = () => {
+const CommunityCard = ( {communityName, communityImageURL} ) => {
 
   const sliderRef = useRef(null);
 
@@ -55,45 +55,19 @@ const CommunityCard = () => {
 
   return (
     <div className={styles.CommunityCardSlider} ref={sliderRef}>
+    
       <div className={styles.ComCard}>
         <div className={styles.ComCardImg}>
-          <img src={image1} alt="" className={styles.image1}/>
+          <img src={communityImageURL} alt="" className={styles.image2}/>
         </div>
         <div className={styles.ComCardContent}>
-            <h3>React Community</h3>
+            <h3>{communityName}</h3>
             <p>
             Dive into our vibrant community where passionate individuals from diverse backgrounds converge to share insights and embark on a collective journey of discovery!
             </p>
             <a href='#'>Click here</a>
         </div>
       </div>
-
-      <div className={styles.ComCard}>
-      <div className={styles.ComCardImg}>
-          <img src={image2} alt="" className={styles.image2}/>
-        </div>
-        <div className={styles.ComCardContent}>
-            <h3>Python Community</h3>
-            <p>
-            Dive into our vibrant community where passionate individuals from diverse backgrounds converge to share insights and embark on a collective journey of discovery!
-            </p>
-            <a href='#'>Click here</a>
-        </div>
-      </div>
-
-      <div className={styles.ComCard}>
-      <div className={styles.ComCardImg}>
-          <img src={image3} alt="" className={styles.image3}/>
-        </div>
-        <div className={styles.ComCardContent}>
-            <h3>Django Community</h3>
-            <p>
-            Dive into our vibrant community where passionate individuals from diverse backgrounds converge to share insights and embark on a collective journey of discovery!
-            </p>
-            <a href='#'>Click here</a>
-        </div>
-      </div>
-
      
     </div>
   );

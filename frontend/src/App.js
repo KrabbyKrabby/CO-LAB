@@ -6,18 +6,20 @@ import ProfileTab from './components/ProfileTab';
 import EditProjectDetailsPage from './pages/EditProjectDetailsPage';
 import MainUserPage from './pages/MainUserPage';
 import ProjectDetails from './pages/ProjectDetails'
+import Communitypage from './pages/CommunityPage'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ProjectDetails/>} />
+        <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/profile" element={<MainUserPage />} />
         <Route path="/editproject" element={<EditProjectDetailsPage />} />
-        <Route path="/project_details" component={<ProjectDetails/>} />
+        <Route path="/project_details" element={<ProjectDetails/>} />
+        <Route path="/community" element={<Communitypage/>} />
       </Routes>
     </Router>
   );

@@ -8,6 +8,9 @@ import CommunityCard from '../components/CommunityCard'
 import image3 from '../assets/Saly-10.png'
 import image4 from '../assets/showcase your project text.png'
 import ProfileShowcaseCard from '../components/ProfileShowcaseCard'
+import javaLogo from '../assets/java_logo.png'
+import pythonLogo from '../assets/python_logo.png'
+import reactLogo from '../assets/React_logo.png'
 
 const HomePage = () => {
 
@@ -55,7 +58,11 @@ const HomePage = () => {
       <div className={styles.CommunityPreview}>
         {/*  TODO link communities , also show top 3 popular community cards */}
         <h3>Join Communities</h3>
-        <CommunityCard/>
+        <div className={styles.community_card_container}>
+          <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
+          <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
+          <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
+        </div>
       </div>
 
       <div className={`${styles.imagesContainer2} ${isScrolled ? styles.reveal : ''}`}>

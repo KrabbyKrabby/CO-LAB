@@ -100,8 +100,23 @@
 }
 
 .CommunityPreview {
+    width: 100%;
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
 }
+
+.community_card_container {
+    align-self: center;
+    width: 100%;
+    display: flex; /* Use flexbox to layout children horizontally */
+    align-items: center; /* Align items vertically in the center */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of content */
+    padding: 20px 0; /* Add some padding top and bottom */
+    gap: 20px; /* Optional: add some space between cards */
+}
+
 
 h4 {
     color: white;

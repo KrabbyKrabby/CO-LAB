@@ -28,7 +28,7 @@ const Navbar = () => {
       <img src={logo} alt="" className={styles.logo} onClick={ () => navigate('/') }/>
       <ul>
         <li><button className={styles.navBtn} onClick={() => navigate('/')}>Home</button></li>
-        <li><button className={styles.navBtn} >Community</button></li>
+        <li><button className={styles.navBtn} onClick={() => navigate('/community')}>Community</button></li>
         <li><button className={styles.navBtn} onClick={() => navigate('/profile')}>Profile</button></li>
         <li><button className={styles.navBtn} >Contact Us</button></li>
       </ul>
