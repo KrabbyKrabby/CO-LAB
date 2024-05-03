@@ -50,7 +50,7 @@ const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
                     <div className={style.profile_content}>
                         {isEditing ? (<textarea value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea} />) : (<ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
                     </div>
-                ) : (TechStack && <TechStack />)
+                ) : (TechStack && <div className={style.TechStackContainer}><TechStack /></div>)
             )}
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../components/CSS/EditProjectDetailsCard.module.css';
 import VideoPlayer from './VideoPlayer';
+import TechStackInput from './TechStackInput';
 
 const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) => {
 
@@ -9,6 +10,7 @@ const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) =>
       <form className={styles.ProjectDetailsForm} >
         <h4>Project Name</h4>
         <input 
+          className={styles.EditProjectDetailsInput}
           type="text" 
           id="ProjectName" 
           name="projectName"
@@ -18,6 +20,7 @@ const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) =>
 
         <h4>Project Description</h4>
         <input 
+          className={styles.EditProjectDetailsInput}
           type="text" 
           id="ProjectDescription" 
           name="projectDescription"
@@ -27,6 +30,7 @@ const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) =>
 
         <h4>Features</h4>
         <input 
+          className={styles.EditProjectDetailsInput}
           type="text" 
           id="ProjectFeatures" 
           name="projectFeatures"
@@ -35,16 +39,13 @@ const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) =>
         />
 
         <h4>Tech Stack</h4>
-        <input 
-          type="text" 
-          id="ProjectTechStack" 
-          name="projectTechStack"
-          value={formData.projectTechStack}
-          onChange={handleInputChange}
-        />
+        <div className={styles.TechStackContainer}>
+        <TechStackInput />  
+        </div>
 
         <h4>Project GitHub Link</h4>
         <input 
+          className={styles.EditProjectDetailsInput}
           type="text" 
           id="ProjectGitHubLink" 
           name="projectGitHubLink"

@@ -21,7 +21,7 @@
   padding: 0;
 }
 
-.ProjectDetailsForm input {
+.EditProjectDetailsInput{
   padding: 2%;
   border: none;
   background: rgba(252, 252, 252, 0.149);
@@ -35,7 +35,7 @@
   transition: background-color 0.3s, transform 0.3s, border 0.3s, box-shadow 0.3s, color 0.3s;
 }
 
-.ProjectDetailsForm input:focus {
+.EditProjectDetailsInput:focus {
   background-color: rgba(75, 90, 199, 0.2);
   transform: scale(1.05);
   border: 2px solid #7a6ffd;
