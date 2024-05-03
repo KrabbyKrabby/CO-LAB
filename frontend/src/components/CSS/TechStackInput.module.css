@@ -40,7 +40,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 52vh; /* Adjust based on your requirements */
+    width: 100%;
+    /* width: 52vh;  */
     height: 150px;
     overflow: auto;
     padding: 0.5rem;

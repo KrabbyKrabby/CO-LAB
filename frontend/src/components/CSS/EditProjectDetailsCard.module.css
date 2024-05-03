@@ -67,3 +67,7 @@
   border: 2px solid #7a6ffd;
   box-shadow: 0 0 15px #7a6ffd;
 }
+
+.TechStackContainer {
+  width: 100%;
+}
