@@ -59,6 +59,9 @@ body{
    width: 100%;
    height: auto;
    transition: transform 0.5s, opacity 0.5s;
+   align-items: center;
+   align-items: center;
+   margin-left: 143px;
  }
  
  .ComCard:hover .ComCardImg {

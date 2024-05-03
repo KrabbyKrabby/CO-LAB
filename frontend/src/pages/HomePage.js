@@ -16,7 +16,7 @@ const HomePage = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition1 = window.scrollY;
-            const revealPoint1 = window.innerHeight / 0.82; 
+            const revealPoint1 = window.innerHeight / 0.95; 
             
             if (scrollPosition1 > revealPoint1) {
                 setIsScrolled(true);
@@ -45,6 +45,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles.buttonContainer}>
+        {/* # TODO link to community / profile page */}
         <button className={styles.btn}>
           Explore more
           <img src={arrow} alt=''/>
@@ -52,6 +53,7 @@ const HomePage = () => {
       </div>
 
       <div className={styles.CommunityPreview}>
+        {/*  TODO link communities , also show top 3 popular community cards */}
         <h3>Join Communities</h3>
         <CommunityCard/>
       </div>

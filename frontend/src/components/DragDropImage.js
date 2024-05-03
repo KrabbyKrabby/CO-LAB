@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import styles from '../components/CSS/DragDropImage.module.css'
 
-const DragDropImage = () => {
+const DragDropImage = ({ onImagesChange }) => {
 
     // State variables
     const [images, setImages] = useState([]); // Array to store selected images
@@ -9,71 +9,67 @@ const DragDropImage = () => {
     const fileInputRef = useRef(null); // Reference to file input element
 
     // Open file dialog when Browse is clicked
-    function selectFiles(){
+    function selectFiles() {
         fileInputRef.current.click();
     }
 
     // Handle file selection
-    function onFileSelect(event){
+    function onFileSelect(event) {
         const files = event.target.files;
-        if(files.length === 0) return;
-        for(let i=0; i< files.length; i++){ 
-            if(files[i].type.split('/')[0] !== 'image') continue;
-            if(!images.some((e) => e.name === files[i].name)) {
-                setImages((prevImages) => [
-                    ...prevImages,
-                    {
-                        name: files[i].name,
-                        url: URL.createObjectURL(files[i]),
-                    },
-                ]);
+        if (files.length === 0) return;
+        let newImages = [];
+        for (let i = 0; i < files.length; i++) {
+            if (files[i].type.split('/')[0] !== 'image') continue;
+            if (!images.some((e) => e.name === files[i].name)) {
+                newImages.push({
+                    name: files[i].name,
+                    url: URL.createObjectURL(files[i]),
+                });
             }
         }
+        setImages((prevImages) => [...prevImages, ...newImages]);
+        if (onImagesChange) onImagesChange([...images, ...newImages]); // Pass updated images to parent component
     }
 
     // Delete an image by index
-    function deleteImage(index){
-        setImages((prevImages) => 
+    function deleteImage(index) {
+        setImages((prevImages) =>
             prevImages.filter((_, i) => i !== index)
         );
     }
 
     // Handle drag over event
-    function ondragover(event){
+    function ondragover(event) {
         event.preventDefault();
         setIsDragging(true);
-        event.dataTransfer.dropEffect = "copy";
+        event.dataTransfer.dropEffect = 'copy';
     }
 
     // Handle drag leave event
-    function ondragleave(event){
+    function ondragleave(event) {
         event.preventDefault();
         setIsDragging(false);
     }
 
     // Handle drop event
-    function ondrop(event){
+    function ondrop(event) {
         event.preventDefault();
         setIsDragging(false);
         const files = event.dataTransfer.files;
-        for(let i=0; i< files.length; i++){ 
-            if(files[i].type.split('/')[0] !== 'image') continue;
-            if(!images.some((e) => e.name === files[i].name)) {
-                setImages((prevImages) => [
-                    ...prevImages,
-                    {
-                        name: files[i].name,
-                        url: URL.createObjectURL(files[i]),
-                    },
-                ]);
+        let newImages = [];
+        for (let i = 0; i < files.length; i++) {
+            if (files[i].type.split('/')[0] !== 'image') continue;
+            if (!images.some((e) => e.name === files[i].name)) {
+                newImages.push({
+                    name: files[i].name,
+                    url: URL.createObjectURL(files[i]),
+                });
             }
         }
+        setImages((prevImages) => [...prevImages, ...newImages]);
+        if (onImagesChange) onImagesChange([...images, ...newImages]); // Pass updated images to parent component
     }
 
-    // Upload images (currently logs images to console)
-    function uploadImage(){
-        console.log('images: ', images);
-    }
 
     
     return (
@@ -111,9 +107,9 @@ const DragDropImage = () => {
                 ))}
             </div>
             {/* Upload button */}
-            <button type={styles.button} onClick={uploadImage}>
+            {/* <button type={styles.button} onClick={uploadImage}>
                 Upload
-            </button>
+            </button> */}
         </div>
     )
 }

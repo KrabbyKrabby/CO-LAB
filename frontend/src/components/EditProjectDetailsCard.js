@@ -1,34 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../components/CSS/EditProjectDetailsCard.module.css';
 import VideoPlayer from './VideoPlayer';
 
-const EditProjectDetailsCard = () => {
-  const [formData, setFormData] = useState({
-    projectName: '',
-    projectDescription: '',
-    projectFeatures: '',
-    projectTechStack: '',
-    projectGitHubLink: '',
-    projectVideoLink: '',
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSignup = (event) => {
-    event.preventDefault();
-    // Here you can handle the form data, for example:
-    console.log(formData);
-  };
+const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) => {
 
   return (
     <div className={styles.EditProjectDetailsCard}>
-      <form className={styles.ProjectDetailsForm} onSubmit={handleSignup}>
+      <form className={styles.ProjectDetailsForm} >
         <h4>Project Name</h4>
         <input 
           type="text" 
@@ -85,7 +63,7 @@ const EditProjectDetailsCard = () => {
           onChange={handleInputChange}
         />
         <VideoPlayer videoLink={formData.projectVideoLink} />
-        
+        {/* <button type="submit" >Save</button> */}
       </form>
     </div>
   );
