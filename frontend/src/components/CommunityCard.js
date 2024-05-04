@@ -9,47 +9,47 @@ const CommunityCard = ( {communityName, communityImageURL} ) => {
 
   const sliderRef = useRef(null);
 
-  useEffect(() => {
-    // Initialize Vanilla Tilt for each element with the class name "ComCard"
-    VanillaTilt.init(document.querySelectorAll('.' + styles.ComCard), {
-      max: 25,
-      speed: 400,
-      glare: true,
-      'max-glare': 0.5,
-    });
+  // useEffect(() => {
+  //   // Initialize Vanilla Tilt for each element with the class name "ComCard"
+  //   VanillaTilt.init(document.querySelectorAll('.' + styles.ComCard), {
+  //     max: 25,
+  //     speed: 400,
+  //     glare: true,
+  //     'max-glare': 0.5,
+  //   });
 
-    // Clean up the tilt effect when the component unmounts
-    return () => {
-      document.querySelectorAll('.' + styles.ComCard).forEach(element => {
-        VanillaTilt.destroy(element);
-      });
-    };
-  }, []); // Run this effect only once after the component is mounted
+  //   // Clean up the tilt effect when the component unmounts
+  //   return () => {
+  //     document.querySelectorAll('.' + styles.ComCard).forEach(element => {
+  //       VanillaTilt.destroy(element);
+  //     });
+  //   };
+  // }, []); // Run this effect only once after the component is mounted
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const slider = sliderRef.current;
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY + windowHeight;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const slider = sliderRef.current;
+  //     const windowHeight = window.innerHeight;
+  //     const scrollPosition = window.scrollY + windowHeight;
 
-      const sliderTop = slider.offsetTop;
-      const sliderBottom = sliderTop + slider.offsetHeight;
+  //     const sliderTop = slider.offsetTop;
+  //     const sliderBottom = sliderTop + slider.offsetHeight;
 
-      // Calculate the opacity based on scroll position
-      const opacity = (scrollPosition - sliderTop) / (sliderBottom - sliderTop);
+  //     // Calculate the opacity based on scroll position
+  //     const opacity = (scrollPosition - sliderTop) / (sliderBottom - sliderTop);
 
-      // Set opacity to slider
-      slider.style.opacity = opacity;
-    };
+  //     // Set opacity to slider
+  //     slider.style.opacity = opacity;
+  //   };
 
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
+  //   // Attach the scroll event listener
+  //   window.addEventListener('scroll', handleScroll);
 
-    // Cleanup: Remove the scroll event listener when component unmounts
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   // Cleanup: Remove the scroll event listener when component unmounts
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
 
 
