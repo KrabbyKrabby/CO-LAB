@@ -2,7 +2,7 @@
 .profile_card {
     width: calc(90% - 10px);
     border-radius: 20px;
-    color: white;
+    color: rgba(255, 255, 255, 0.267);
     margin: 20px;
     overflow: hidden; /* Keeps children within the border radius */
     display: flex;
@@ -57,7 +57,7 @@
 .profile_content {
     align-self: center;
     width: 90%;
-    background: rgba(217, 217, 217, 0.75);
+    background: rgba(217, 217, 217, 0.251);
     border-radius: 12px;
 }
 

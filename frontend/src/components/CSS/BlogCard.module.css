@@ -1,26 +1,24 @@
 /* BlogCard.css */
 .blog_card {
-    width: 47%; /* Adjust the width to fit two cards per row with spacing */
-    height: auto; /* Height can be auto for flexibility */
-    background: rgba(217, 217, 217, 0.75);
-    border-radius: 32px;
-    margin: 10px; /* This adds space around the card */
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .blog_card h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
-    margin-left: 5%;
-  }
-  
-  .blog_card p {
-    font-size: 16px;
-    margin-left: 5%;
-  }
-  
-  
+  width: 47%; /* Adjust the width to fit two cards per row with spacing */
+  height: auto; /* Height can be auto for flexibility */
+  background: rgba(217, 217, 217, 0.75);
+  border-radius: 32px;
+  margin: 10px; /* This adds space around the card */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.blog_card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  margin-left: 5%;
+}
+
+.blog_card p {
+  font-size: 16px;
+  margin-left: 5%;
+}

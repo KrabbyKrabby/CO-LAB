@@ -7,6 +7,7 @@ import EditProjectDetailsPage from './pages/EditProjectDetailsPage';
 import MainUserPage from './pages/MainUserPage';
 import ProjectDetails from './pages/ProjectDetails'
 import Communitypage from './pages/CommunityPage'
+import BlogPost from './pages/BlogPost';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -20,8 +21,11 @@ function App() {
         <Route path="/editproject" element={<EditProjectDetailsPage />} />
         <Route path="/project_details" element={<ProjectDetails/>} />
         <Route path="/community" element={<Communitypage/>} />
+        <Route path="/project_details" component={<ProjectDetails/>} />
+        <Route path='/blog_post' Component={<BlogPost/>} />
       </Routes>
     </Router>
+    
   );
 }
 

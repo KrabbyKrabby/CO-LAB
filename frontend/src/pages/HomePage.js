@@ -41,6 +41,8 @@ const HomePage = () => {
     <div className={styles.homePage}>
 
       <Navbar/>
+      
+
 
       <div className={styles.imagesContainer1}>
         <img src={image1} alt="" className={styles.image1}/>

@@ -8,9 +8,11 @@ h1{
 }
 
 .ProjectDetailsButton {
+  
   padding: 15px;
   margin-top: 50px;
   margin-bottom: 100px;
+  margin-left: 180px;
   border: none;
   background: rgba(235, 227, 227, 0.179);
   border-radius: 17px;
