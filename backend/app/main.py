@@ -1,36 +1,10 @@
-from fastapi import FastAPI, HTTPException, status
-from typing import List
-
-# Import your models from the users.models file
-from .users.models import UserCreate, UserDisplay
+from fastapi import FastAPI
+from users.routes import router as user_router
 
 app = FastAPI()
 
-# Mock database to store users
-"""
-TODO: Replace the mock database with a real database like MongoDB( wink wink `)
+app.include_router(user_router, prefix="/users", tags=["users"])
 
-
-"""
-db: List[UserDisplay] = []
-
-@app.post("/users/", response_model=UserDisplay, status_code=status.HTTP_201_CREATED)
-def create_user(user: UserCreate):
-    if user.password != user.confirm_password:
-        raise HTTPException(status_code=400, detail="Passwords do not match")
-    new_user = UserDisplay(
-        id=len(db) + 1,
-        full_name=user.full_name,
-        email=user.email,
-        username=user.username,
-        bio="",
-        tech_stack=[],
-        experience=""
-    )
-    db.append(new_user)
-    return new_user
-
-# Start the Uvicorn server to run the application
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8000)
