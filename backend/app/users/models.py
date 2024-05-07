@@ -9,7 +9,7 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str = Field(..., min_length=8)
-    confirm_password: str = Field(..., min_length=8)
+    confirm_password: str | None = Field(..., min_length=8)
     registration_number: str
     date_of_birth: date
     batch: str
