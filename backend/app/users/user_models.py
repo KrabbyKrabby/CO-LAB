@@ -1,21 +1,21 @@
 from pydantic import BaseModel, EmailStr, HttpUrl, Field
 from datetime import date
-from typing import Optional
+from typing import Optional, List
 
 class UserBase(BaseModel):
     full_name: str
     email: EmailStr
-    username: str
+    username: str  # Unique identifier
 
 class UserCreate(UserBase):
     password: str = Field(..., min_length=8)
-    confirm_password: str | None = Field(..., min_length=8)
+    confirm_password: Optional[str] = Field(None, min_length=8)
     registration_number: str
     date_of_birth: date
     batch: str
     avatar: Optional[HttpUrl] = None
-    following_people: list = []
-    following_communities: list = []
+    following_people: List[str] = []  # Change to List of usernames
+    following_communities: List[str] = []  # List of community identifiers
 
     class Config:
         schema_extra = {
@@ -29,33 +29,31 @@ class UserCreate(UserBase):
                 "date_of_birth": "1990-01-01",
                 "batch": "2022",
                 "avatar": "http://example.com/avatar.jpg",
-                "following_people": [],
-                "following_communities": []
+                "following_people": ["janedoe"],
+                "following_communities": ["community1", "community2"]
             }
         }
 
 class UserLogin(BaseModel):
-    email: EmailStr
+    username: str  # Changed from email to username for primary login identifier
     password: str
 
     class Config:
         schema_extra = {
             "example": {
-                "email": "john.doe@example.com",
+                "username": "johndoe",
                 "password": "password123"
             }
         }
 
 class UserDisplay(UserBase):
-    id: int
     bio: Optional[str] = None
-    tech_stack: Optional[list] = []
+    tech_stack: Optional[List[str]] = []
     experience: Optional[str] = None
 
     class Config:
         schema_extra = {
             "example": {
-                "id": 1,
                 "full_name": "John Doe",
                 "email": "john.doe@example.com",
                 "username": "johndoe",
