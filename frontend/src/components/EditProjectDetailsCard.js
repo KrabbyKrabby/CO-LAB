@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../components/CSS/EditProjectDetailsCard.module.css';
 import VideoPlayer from './VideoPlayer';
 import TechStackInput from './TechStackInput';
 
 const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) => {
+
+  const[selectedTechStack, setTechStack] = useState([]);
 
   return (
     <div className={styles.EditProjectDetailsCard}>
@@ -40,7 +42,7 @@ const EditProjectDetailsCard = ({formData, handleInputChange, toggleEditing}) =>
 
         <h4>Tech Stack</h4>
         <div className={styles.TechStackContainer}>
-        <TechStackInput />  
+        <TechStackInput selectedTechStack={selectedTechStack} setTechStack={setTechStack} canEdit={true}/>  
         </div>
 
         <h4>Project GitHub Link</h4>

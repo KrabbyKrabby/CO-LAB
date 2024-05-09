@@ -14,10 +14,14 @@
 }
 
 .community_card_container {
+    width: 1500px;
+    height: 600px;
     display: flex;
-    flex-direction: row;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    flex-wrap: nowrap; /* Prevent flex items from wrapping */
-    gap: 20px; /* Optional: adds spacing between cards */
-    padding: 10px 0; /* Optional: adds padding inside the container */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.text{
+    align-self: self-start;
 }

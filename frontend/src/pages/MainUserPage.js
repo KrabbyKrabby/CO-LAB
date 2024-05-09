@@ -7,10 +7,24 @@ import ProjectCard from '../components/ProjectCard';
 import ProfileCard from '../components/ProfileCard';
 import TechStackInput from '../components/TechStackInput'; 
 
-const HomePage = () => {
+const MainUserPage = () => {
 
   const [selectedTab, setSelectedTab] = useState(1);
+  const[selectedTechStack, setTechStack] = useState(['React', 'Node']);
+  const[canEdit, setCanEdit] = useState(false);
 
+  function hadleEdit(){
+    setCanEdit(!canEdit);
+  }
+
+  const TechStackInputWithProps = () => (
+    <TechStackInput selectedTechStack={selectedTechStack} setTechStack={setTechStack} canEdit={canEdit}/>
+  );
+  
+
+  function doesNothing(){
+    
+  }
 
   return (
     <div className={style.mainuserpage_container}>
@@ -19,9 +33,9 @@ const HomePage = () => {
 
         {selectedTab === 1 && (
           <div className={style.profile_card_container}>
-              <ProfileCard title='Bio' ProfileInfo='Hello I am great'/>
-              <ProfileCard title='Tech Stack' TechStack={TechStackInput}/>
-              <ProfileCard title='Experience' ProfileInfo='Hello I am great'/>
+              <ProfileCard title='Bio' ProfileInfo='Hello I am great' handleEdit={doesNothing} />
+              <ProfileCard title='Tech Stack' TechStack={TechStackInputWithProps} handleEdit={hadleEdit}/>
+              <ProfileCard title='Experience' ProfileInfo='Hello I am great' handleEdit={doesNothing}/>
           </div>
         )}
 
@@ -46,4 +60,4 @@ const HomePage = () => {
   );
 }
 
-export default HomePage
+export default MainUserPage

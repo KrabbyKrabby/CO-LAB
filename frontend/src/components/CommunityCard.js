@@ -1,13 +1,11 @@
 import React, { useEffect, useRef } from 'react'
-import VanillaTilt from 'vanilla-tilt';
 import styles from '../components/CSS/CommunityCard.module.css';
-import image1 from '../assets/React_logo.png'
-import image2 from '../assets/python_logo.png'
-import image3 from '../assets/java_logo.png'
+import { useNavigate } from "react-router-dom";
 
 const CommunityCard = ( {communityName, communityImageURL} ) => {
 
   const sliderRef = useRef(null);
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   // Initialize Vanilla Tilt for each element with the class name "ComCard"
@@ -65,7 +63,8 @@ const CommunityCard = ( {communityName, communityImageURL} ) => {
             <p>
             Dive into our vibrant community where passionate individuals from diverse backgrounds converge to share insights and embark on a collective journey of discovery!
             </p>
-            <a href='#'>Click here</a>
+            <button className={styles.click_here} onClick={() => navigate('/community_details')}>Click Here</button>
+            {/* <a href='#'>Click here</a> */}
         </div>
       </div>
      

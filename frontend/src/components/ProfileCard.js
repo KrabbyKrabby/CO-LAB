@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useRef,useState } from 'react'
 import style from './CSS/ProfileCard.module.css';
 import whiteDot from '../assets/WhiteDot.png';
 import whiteDownArrow from '../assets/white-down-arrow.png';
@@ -7,10 +7,21 @@ import pen from '../assets/pen.png';
 import saveIcon from '../assets/done.png';  // Assuming you have a save icon in your assets
 import ReactMarkdown from 'https://esm.sh/react-markdown@9'
 
-const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
+const ProfileCard = ({ title,TechStack,ProfileInfo,handleEdit }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
     const [profileInfo, setProfileInfo] = useState(ProfileInfo);
+
+    //expanding text area
+    const inputRef = useRef(null);
+    useEffect(() => {
+        if (inputRef.current) {
+            const lines = inputRef.current.value.split('\n').length;
+            console.log('lines');
+            console.log( lines * 5 + 20);
+            inputRef.current.style.height = `${Math.max(50, lines * 20 + 20)}px`;
+        }
+    }, [profileInfo]);
 
     const toggleVisibility = () => {
         setIsVisible(!isVisible);
@@ -22,6 +33,7 @@ const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
 
     const toggleEdit = () => {
         setIsEditing(!isEditing);
+        handleEdit();
     };
 
     const handleProfileInfoChange = (event) => {
@@ -30,6 +42,7 @@ const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
 
     const saveEdit = () => {
         setIsEditing(false);
+        handleEdit();
     };
 
     return (
@@ -48,7 +61,8 @@ const ProfileCard = ({ title,TechStack,ProfileInfo }) => {
             {isVisible && (
                 ProfileInfo ? (
                     <div className={style.profile_content}>
-                        {isEditing ? (<textarea value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea} />) : (<ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
+                        {isEditing ? (<textarea ref={inputRef} value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea}
+                        s />) : (<ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
                     </div>
                 ) : (TechStack && <div className={style.TechStackContainer}><TechStack /></div>)
             )}

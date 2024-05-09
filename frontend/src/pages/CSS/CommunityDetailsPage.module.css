@@ -1,0 +1,31 @@
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.community_card_container {
+    width: 1500px;
+    height: 400px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.text{
+    align-self: self-start;
+}
+
+.community_name{
+    margin-bottom: 5vh;
+}
+
+.community_image{
+    margin-bottom: 10vh;
+}
+
+
+
