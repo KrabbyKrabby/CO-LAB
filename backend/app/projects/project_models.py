@@ -1,7 +1,9 @@
 from pydantic import BaseModel, HttpUrl
 from typing import List
+import uuid
 
 class ProjectDetails(BaseModel):
+    id: uuid.UUID = None  # This field will be auto-generated
     username: str
     project_name: str
     project_description: str
