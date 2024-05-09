@@ -82,49 +82,11 @@
 ### `CommunityDetails`
 
 ```json
+
 {
   "community_name": "Community Name",
-  "projects": [
-    {
-      "username": "johndoe",
-      "project_name": "Project 1",
-      "project_description": "Project Description",
-      "features": ["Feature 1", "Feature 2"],
-      "tech_stack": ["Python", "FastAPI", "Docker"],
-      "github_link": "example.com/github",
-      "youtube_link": "example.com/youtube",
-      "images": [
-        "http://example.com/image1.jpg",
-        "http://example.com/image2.jpg"
-      ]
-    },
-    {
-      "username": "johndoe",
-      "project_name": "Project 2",
-      "project_description": "Project Description",
-      "features": ["Feature 1", "Feature 2"],
-      "tech_stack": ["Python", "FastAPI", "Docker"],
-      "github_link": "example.com/github",
-      "youtube_link": "example.com/youtube",
-      "images": [
-        "http://example.com/image1.jpg",
-        "http://example.com/image2.jpg"
-      ]
-    }
-  ],
-  "blogs": [
-    {
-      "username": "johndoe",
-      "blog_title": "Blog Title",
-      "blog_date": "2022-01-01",
-      "blog_description": "Blog Description"
-    },
-    {
-      "username": "johndoe",
-      "blog_title": "Blog Title",
-      "blog_date": "2022-01-01",
-      "blog_description": "Blog Description"
-    }
-  ]
+  "projects": ["uuid1", "uuid2"],
+  "blogs": ["uuid1", "uuid2"],
 }
+
 ```
