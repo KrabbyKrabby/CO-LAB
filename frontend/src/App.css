@@ -9,7 +9,15 @@
 }
 body{
     background: #0f112e;
+    background-image: url('./assets/Ellipse 2.png'), url('./assets/Ellipse 3.png'),url('./assets/Ellipse 3.png'),url('./assets/Ellipse 2.png'), url('./assets/Ellipse 2.png'),url('./assets/Ellipse 3.png');
+    background-size: 20% auto, 30% auto, 60% auto, 45% auto, 20% auto, 75% auto ; /* Adjust the percentage as needed */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: -10% 100px,115% 80px,-65% 850px, 
+                        120% 400px, 75% 1900px, 10% 2300px
+                        /* Adjust the 10px value to your desired offset */
+
 }
+
 a{
     text-decoration: none;
     color: inherit;

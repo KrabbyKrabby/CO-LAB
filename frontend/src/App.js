@@ -9,6 +9,7 @@ import ProjectDetails from './pages/ProjectDetails'
 import Communitypage from './pages/CommunityPage'
 import CommunityDetailsPage from './pages/CommunityDetailsPage'
 import BlogPost from './pages/BlogPost';
+// import image1 from './assets/Ellipse 1.png'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
