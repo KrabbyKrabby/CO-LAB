@@ -27,6 +27,7 @@ def get_community(community_id: uuid.UUID):
         raise HTTPException(status_code=404, detail="Community not found")
     return community
 
+
 @router.put("/{community_id}", response_model=CommunityDetails)
 def update_community(community_id: uuid.UUID, community_update: CommunityDetails):
     index = next((i for i, c in enumerate(communities_db) if c.id == community_id), None)
@@ -37,6 +38,7 @@ def update_community(community_id: uuid.UUID, community_update: CommunityDetails
     community_update.id = communities_db[index].id
     communities_db[index] = community_update
     return community_update
+
 
 @router.delete("/{community_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_community(community_id: uuid.UUID):
