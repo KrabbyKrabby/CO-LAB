@@ -2,6 +2,7 @@ import React from 'react';
 import './CSS/Background.scss';
 import './Background_main.ts'
 
+
 const Background = () => {
   
   return (

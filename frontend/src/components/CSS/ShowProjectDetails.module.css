@@ -8,17 +8,21 @@
     -ms-overflow-style: none; 
     justify-content: flex-start;
     font-size: 16px;
-    background-color: #ffffff2a;
+    /* background-color: #ffffff1c; */
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: rgb(255, 255, 255);
-
     width: 1200px;
     height: auto;
   }
-  
+
+.projectHTitle{
+  font-size: 55px;
+  font-weight: 900;
+}
+ 
   .ShowProjectDetailsCard h2 {
     color: rgb(255, 255, 255);
     margin-bottom: 20px;
@@ -26,6 +30,11 @@
   
   .detailItem {
     margin-bottom: 15px;
+    background-color: #7b6ffd48;
+    min-height: 80px;
+    margin: 15px;
+    border-radius: 15px;
+    padding: 10px;
     transition: transform 0.3s ease;
   }
   
@@ -37,25 +46,31 @@
   .detailItem h4 {
     margin-bottom: 5px;
     color: rgb(255, 255, 255);
+    
   }
   
   .detailItem p {
     margin: 0;
     color: rgb(255, 255, 255);
+    
   }
   
   .detailItem a {
-    color: #007bff;
+    color: #69b1ff;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   .detailItem a:hover {
     text-decoration: underline;
+    color: #268dfc;
   }
   
   .imageContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-bottom: 20px; /* Add some bottom margin to separate from other content */
   }
   
   .imageContainer img {
@@ -119,3 +134,4 @@
     
 }
   
+

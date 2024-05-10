@@ -1,7 +1,9 @@
 .mainuserpage_container {
     width: 800px;
 
-    background-color: #0f112e;
+    background-color: #ffffff13;
+    border-radius: 20px;
+    margin-bottom: 50px;
     /* background-color: aqua; */
     display: flex;
     flex-direction: column;
