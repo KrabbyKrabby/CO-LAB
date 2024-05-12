@@ -1,6 +1,8 @@
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, field_serializer
 from typing import List
 import uuid
+
+from pydantic_core import Url
 
 class ProjectDetails(BaseModel):
     id: uuid.UUID = None  # This field will be auto-generated
@@ -13,6 +15,22 @@ class ProjectDetails(BaseModel):
     youtube_link: HttpUrl
     images: List[HttpUrl]
     associated_community: str
+    
+    @field_serializer('github_link')
+    def url2str_github(self, val) -> str:
+        if isinstance(val, Url):
+            return str(val)
+        return val
+
+    @field_serializer('youtube_link')
+    def url2str_youtube(self, val) -> str:
+        if isinstance(val, Url):
+            return str(val)
+        return val
+
+    @field_serializer('images')
+    def images2str(self, val: List[HttpUrl]) -> List[str]:
+        return [str(url) for url in val]
 
     class Config:
         schema_extra = {

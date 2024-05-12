@@ -1,4 +1,4 @@
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel
 from datetime import date
 import uuid
 
@@ -6,7 +6,7 @@ class BlogDetails(BaseModel):
     id: uuid.UUID = None  # This field will be auto-generated
     username: str
     blog_title: str
-    blog_date: date
+    # blog_date: date
     blog_description: str
     associated_community: str
 

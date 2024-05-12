@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException, status
 from typing import List
 from .community_models import CommunityDetails  # Ensure the import path is correct
+from ..mongo import connect as mongoDB
 import uuid
 
 router = APIRouter()
@@ -8,42 +9,38 @@ router = APIRouter()
 # This will serve as our mock database for communities
 communities_db: List[CommunityDetails] = []
 
-@router.post("/create/", response_model=CommunityDetails, status_code=status.HTTP_201_CREATED)
+@router.post("/create", status_code=status.HTTP_201_CREATED)
 def create_community(community: CommunityDetails):
-    if any(c.community_name == community.community_name for c in communities_db):
-        raise HTTPException(status_code=400, detail="Community name already exists")
+    
     community.id = uuid.uuid4()  # Generate unique ID
-    communities_db.append(community)
-    return community
+    
+    success = mongoDB.add_community(community)
+    
+    if success: return {"success": True, "message": "Community created successfully"}
+    else: raise HTTPException(status_code=400, detail="Failed to create community")
 
 @router.get("/", response_model=List[CommunityDetails])
 def get_communities():
-    return communities_db
+    return mongoDB.get_communities()
 
 @router.get("/{community_id}", response_model=CommunityDetails)
 def get_community(community_id: uuid.UUID):
-    community = next((c for c in communities_db if c.id == community_id), None)
-    if community is None:
-        raise HTTPException(status_code=404, detail="Community not found")
-    return community
+    return mongoDB.get_community(community_id)
 
 
 @router.put("/{community_id}", response_model=CommunityDetails)
 def update_community(community_id: uuid.UUID, community_update: CommunityDetails):
-    index = next((i for i, c in enumerate(communities_db) if c.id == community_id), None)
-    if index is None:
-        raise HTTPException(status_code=404, detail="Community not found")
-    if any(c.community_name == community_update.community_name and c.id != community_id for c in communities_db):
-        raise HTTPException(status_code=400, detail="Community name already exists")
-    community_update.id = communities_db[index].id
-    communities_db[index] = community_update
-    return community_update
+    community_update.id = community_id
+
+    success = mongoDB.update_community(community_id, community_update)
+    if success: return {"success": True, "message": "Community updated successfully"}
+    if success == 0: raise HTTPException(status_code=404, detail="Community not found")
+    if success is None: raise HTTPException(status_code=400, detail="Failed to update community")
 
 
 @router.delete("/{community_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_community(community_id: uuid.UUID):
-    index = next((i for i, c in enumerate(communities_db) if c.id == community_id), None)
-    if index is None:
-        raise HTTPException(status_code=404, detail="Community not found")
-    communities_db.pop(index)
-    return {"message": "Community deleted successfully"}
+    success = mongoDB.delete_community(community_id)
+    if success: return {"success": True, "message": "Community deleted successfully"}
+    if success == 0: raise HTTPException(status_code=404, detail="Community not found")
+    if success is None: raise HTTPException(status_code=400, detail="Failed to delete community")

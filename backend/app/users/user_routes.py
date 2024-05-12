@@ -36,3 +36,5 @@ def login(user_credentials: UserLogin):
         raise HTTPException(status_code=401, detail="Invalid credentials")
     
     return {"message": "Login successful", "username": user_credentials.username}
+
+

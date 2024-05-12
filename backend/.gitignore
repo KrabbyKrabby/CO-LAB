@@ -1,4 +1,2 @@
-__pycache__
-app/__pycache__
-app/users/__pycache__
-app/mongo/__pycache__
+__pycache__/
+*.pyc
