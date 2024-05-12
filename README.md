@@ -1,14 +1,11 @@
 # CO-LAB
 
-## install vanilla tilt:
-npm install vanilla-tilt
+## Start the backend server
+`cd backend`
+`pip intall -r .\requirements.txt`
+`uvicorn app.main:app --reload`
 
-## install react-dom
-npm install react
-npm install react-dom
-npm install
-npm install react-markdown
-
-
-# install sass
-npm install sass
+## Start the web server
+`cd frontend`
+`npm i`
+`npm start`

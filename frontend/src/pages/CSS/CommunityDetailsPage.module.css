@@ -1,4 +1,4 @@
-.CommunityPageContainer {
+.MainContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,16 +6,9 @@
     align-items: center;
 }
 
-.CommunityPreview {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 50px;
-}
-
 .community_card_container {
     width: 1500px;
-    height: 600px;
+    height: 400px;
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
@@ -25,3 +18,14 @@
 .text{
     align-self: self-start;
 }
+
+.community_name{
+    margin-bottom: 5vh;
+}
+
+.community_image{
+    margin-bottom: 10vh;
+}
+
+
+

@@ -1,6 +1,7 @@
 .profile_tab {
     margin-top: 0%;
-    background-color: #0D0D21;
+    background-color: #40407682;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     padding: 1rem;
     display: flex;
@@ -15,6 +16,8 @@
   .profile_tab::-webkit-scrollbar {
     display: none; 
  }
+
+ 
   
   .profile_info {
     display: flex;
@@ -55,7 +58,7 @@
   }
   
   .tab_button {
-    background-color: #666;
+    background-color: #776ccd;
     border: none;
     padding: 0.5rem 1rem;
     margin-right: 0.5rem;
@@ -67,7 +70,7 @@
   }
 
   .tab_button.selected, .tab_button:active {
-    background-color: #9d9393; /* Darker shade for selected/active state */
+    background-color: #292175; /* Darker shade for selected/active state */
 }
   
   .tab_button:hover {

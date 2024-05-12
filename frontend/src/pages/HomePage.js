@@ -11,6 +11,7 @@ import ProfileShowcaseCard from '../components/ProfileShowcaseCard'
 import javaLogo from '../assets/java_logo.png'
 import pythonLogo from '../assets/python_logo.png'
 import reactLogo from '../assets/React_logo.png'
+// import MorphingBackground from '../components/Background'
 
 const HomePage = () => {
 
@@ -41,6 +42,7 @@ const HomePage = () => {
     <div className={styles.homePage}>
 
       <Navbar/>
+      {/* <MorphingBackground/> */}
       
 
 

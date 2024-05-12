@@ -11,24 +11,28 @@ const CommunityPage = () => {
   return (
     <div className={styles.CommunityPageContainer}>
         <Navbar/>
-        <div className={styles.CommunityPreview}>
+        <h3 className={styles.text}>Your Communities</h3>
         {/*  TODO link communities , also show top 3 popular community cards */}
-        <h3>Your Communities</h3>
         <div className={styles.community_card_container}>
           <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
           <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
           <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
-        </div>
-      </div>
-      <div className={styles.CommunityPreview}>
-        {/*  TODO link communities , also show top 3 popular community cards */}
-        <h3>Other Communities</h3>
-        <div className={styles.community_card_container}>
           <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
           <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
           <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
         </div>
-      </div>
+
+      <h3 className={styles.text}>Other Communities</h3>
+        {/*  TODO link communities , also show top 3 popular community cards */}
+        <div className={styles.community_card_container}>
+          <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
+          <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
+          <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
+          <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
+          <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
+          <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
+        </div>
+
     </div>
   );
 }

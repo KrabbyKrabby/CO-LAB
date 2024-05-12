@@ -19,6 +19,9 @@
 }
 
 .profile_info{
+    min-height: 100px;
+    overflow: hidden;
+    height: auto;
     width: 100%;
     padding: 10px;
     word-wrap: break-word;
@@ -55,6 +58,7 @@
 }
 
 .profile_content {
+    height: auto;
     align-self: center;
     width: 90%;
     background: rgba(217, 217, 217, 0.251);

@@ -1,13 +1,12 @@
 .CommunityCardSlider {
+    position: relative;
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     scrollbar-width: none; 
     -ms-overflow-style: none; 
-    justify-content: flex-start;
     flex-wrap: nowrap; 
-
     opacity: 1; 
     transition: opacity 0.5s ease-in-out; 
   }
@@ -103,7 +102,7 @@ body{
    color: white;
    font-weight: 300;
  }
-a{
+.click_here{
    position: relative;
    display:  inline-block;
    padding: 8px 20px;
