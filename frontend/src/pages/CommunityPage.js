@@ -30,6 +30,7 @@ const CommunityPage = ({ isLoggedIn, setIsLoggedIn, username, setUsername }) => 
             key={index}
             communityName={community.communityName}
             communityImageURL={community.communityImageURL}
+            username={username}
           />
         ))}
       </div>

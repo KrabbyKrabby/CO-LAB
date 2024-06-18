@@ -10,6 +10,7 @@ const ProfileTab = ({ onTabSelect, selectedTab, username, setCurrentProject }) =
 
   // Separate function for handling Add Project button click
   const handleAddProjectClick = () => {
+    console.log('Add Project clicked');
     const emptyProject = {
       projectUsername: username,
       projectCommunity: '',
@@ -18,7 +19,7 @@ const ProfileTab = ({ onTabSelect, selectedTab, username, setCurrentProject }) =
       projectFeatures: '',
       projectGitHubLink: '',
       projectVideoLink: '',
-      communities:[],
+      projectCommunity: '',
       images: [],
       techStack: []
     };

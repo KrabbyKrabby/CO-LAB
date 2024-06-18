@@ -40,9 +40,9 @@ const MainUserPage = ({ isLoggedIn, setIsLoggedIn, username, setUsername, projec
 
       {selectedTab === 1 && (
         <div className={style.profile_card_container}>
-          <ProfileCard title="Bio" ProfileInfo="Hello I am great" handleEdit={() => {}} />
+          <ProfileCard title="Bio" ProfileInfo="I am a student of Dhaka University persuing my Bachelor's in Computer Science and Engineering. I am a passionate software engineer working mainly with backend." handleEdit={() => {}} />
           <ProfileCard title="Tech Stack" TechStack={TechStackInputWithProps} handleEdit={handleEdit} />
-          <ProfileCard title="Experience" ProfileInfo="Hello I am great" handleEdit={() => {}} />
+          <ProfileCard title="Experience" ProfileInfo="2 years of Professional Experience in Software Engineering" handleEdit={() => {}} />
         </div>
       )}
 

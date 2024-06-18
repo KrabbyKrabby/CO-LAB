@@ -22,7 +22,7 @@ const EditProjectDetailsPage = ({
   const handleSubmit = (event) => {
     event.preventDefault();
     handleTechStackChange(selectedTechStack);
-    handleSave(); // Call the handleSave function to update the project
+    toggleEditing();
   };
 
   return (
@@ -32,7 +32,7 @@ const EditProjectDetailsPage = ({
         <h1>Edit Project Details</h1>
       </div>
       <form onSubmit={handleSubmit}>
-        <EditProjectDetailsCard formData={formData} handleInputChange={handleInputChange} selectedTechStack={selectedTechStack} setTechStack={setTechStack} />
+        <EditProjectDetailsCard formData={formData} handleInputChange={handleInputChange} selectedTechStack={selectedTechStack} setTechStack={setTechStack} handleTechStackChange = {handleTechStackChange} />
         <DragDropImage onImagesChange={handleImagesChange} />
         <button type="submit" className={styles.ProjectDetailsButton}>SUBMIT</button>
       </form>

@@ -41,4 +41,20 @@
     margin-top: 10px;
     color: #9ba6ff;
   }
+
+  .editButton {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    align-self: center;
+  }
+  
+  .editButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
   

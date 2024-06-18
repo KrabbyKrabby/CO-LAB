@@ -13,6 +13,8 @@ const ProjectDetails = ({ isLoggedIn, setIsLoggedIn, username, setUsername, curr
   const [formData, setFormData] = useState(currentProject);
 
   useEffect(() => {
+    console.log('hello')
+    console.log(currentProject);
     if (currentProject) {
       setFormData(currentProject);
     }
@@ -44,6 +46,7 @@ const ProjectDetails = ({ isLoggedIn, setIsLoggedIn, username, setUsername, curr
       {editing ? (
         <EditProjectDetailsPage 
           formData={formData}
+          setFormData={setFormData}
           handleInputChange={handleInputChange}
           handleImagesChange={handleImagesChange}
           toggleEditing={toggleEditing}
