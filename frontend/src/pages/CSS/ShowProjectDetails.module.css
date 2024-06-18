@@ -133,5 +133,57 @@
     box-shadow: 0 6px 12px rgba(13, 10, 45, 0.6);
     
 }
+
+.submitButton {
+  width: 13vh;
+  align-self: flex-end;
+  padding: 10px 10px;
+  background-color: #776ccd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submitButton:hover {
+  background-color: #292175;
+  transform: translateY(-2px);
+}
+.detailItem h3, .detailItem h6 {
+  margin-bottom: 5px;
+  color: #9ba6ff;
+}
+
+.detailItem p {
+  margin: 0;
+  color: #ffffff;
+}
+
+.detailItem {
+  margin-bottom: 15px;
+  background-color: #7b6ffd48;
+  min-height: 80px;
+  margin: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.detailItem:hover {
+  transform: translateY(-5px);
+}
+
+.detailItem h3 {
+  margin-bottom: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.detailItem p {
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+
   
 

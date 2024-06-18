@@ -1,29 +1,33 @@
-/* ProjectCard.css */
 .project_card {
-    flex-shrink: 0;
-    width: 29vh; /* Adjust the width to fit two cards per row with spacing */
-    height: 35vh; /* Height can be auto for flexibility */
-    background: rgba(217, 217, 217, 0.75);
-    border-radius: 32px;
-    margin: 20px; /* This adds space around the card */
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  
-    .project_card h3 {
-        font-size: 24px;
-        margin-bottom: 16px;
-        margin-left: 5%;
-    }
+  flex-shrink: 0;
+  width: 29vh; /* Adjust the width to fit two cards per row with spacing */
+  height: 35vh; /* Height can be auto for flexibility */
+  background: rgba(217, 217, 217, 0.75);
+  border-radius: 32px;
+  margin: 20px; /* This adds space around the card */
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
 
-    .project_card p {
-        font-size: 16px;
-        margin-left: 5%;
-    }
+.project_card:hover {
+  background: #292175;
+}
 
-  
-  
+.project_card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  margin-left: 5%;
+}
+
+.project_card p {
+  font-size: 16px;
+  margin-left: 5%;
+  display: -webkit-box; /* Ensures compatibility with webkit browsers */
+  -webkit-line-clamp: 8; /* Limits the text to 8 lines */
+  -webkit-box-orient: vertical; /* Ensures the box orientation is vertical */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

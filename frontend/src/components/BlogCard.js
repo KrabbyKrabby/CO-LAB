@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './CSS/BlogCard.module.css';
 
-const BlogCard = ({ title, description }) => {
+const BlogCard = ({ title, description, onClick }) => {
     return (
-        <div className={style.blog_card}>
+        <div onClick={onClick} className={style.blog_card}>
           <h3>{title}</h3>
           <p>{description}</p>
         </div>

@@ -49,4 +49,16 @@
     background-color: #4B5AC7; /* Darken the button color on hover */
   }
 
+  .login_link, .account_link {
+    color: #78abed;
+    font-weight: bold;
+    background: rgba(148, 134, 134, 0.22);
+  }
+  
+  .login_link:hover, .account_link:hover {
+    text-decoration: underline;
+    color: black;
+    transform: translateY(-3px);
+    background-color: #4B5AC7;
+  }
   

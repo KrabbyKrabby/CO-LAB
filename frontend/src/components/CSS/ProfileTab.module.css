@@ -74,7 +74,7 @@
 }
   
   .tab_button:hover {
-    background-color: #9d9393; /* Darker shade for selected/active state */
+    background-color: #292175; /* Darker shade for selected/active state */
   }
   
   .profile_icons {
@@ -86,5 +86,22 @@
     width: 24px;
     height: 24px;
     margin-left: 1rem;
+  }
+
+  .add_button {
+    background-color: #776ccd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .add_button:hover {
+    background-color: #292175;
+    transform: translateY(-2px);
   }
   

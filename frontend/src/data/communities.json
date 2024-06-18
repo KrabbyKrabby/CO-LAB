@@ -1,0 +1,23 @@
+[
+    {
+      "communityName": "Python",
+      "communityImageURL": "../assets/python_logo.png"
+    },
+    {
+      "communityName": "Java",
+      "communityImageURL": "../assets/java_logo.png"
+    },
+    {
+      "communityName": "React",
+      "communityImageURL": "../assets/React_logo.png"
+    },
+    {
+      "communityName": "C/C++",
+      "communityImageURL": "../assets/Clogo.png"
+    },
+    {
+      "communityName": "Django",
+      "communityImageURL": "../assets/java_logo.png"
+    }
+  ]
+  

@@ -1,16 +1,15 @@
-import React from 'react'
-import styles from './CSS/LoginPage.module.css'
+import React from 'react';
+import styles from './CSS/LoginPage.module.css';
 import Navbar from '../components/Navbar';
 import LoginCard from '../components/LoginCard';
 
-
-const HomePage = () => {
+const LoginPage = ({ setIsLoggedIn, isLoggedIn, username, setUsername, credentials }) => {
   return (
     <div className={styles.LoginPageContainer}>
-        <Navbar/>
-        <LoginCard/>
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} username={username} setUsername={setUsername} />
+      <LoginCard setIsLoggedIn={setIsLoggedIn} setUsername={setUsername} credentials={credentials} />
     </div>
   );
 }
 
-export default HomePage
+export default LoginPage;

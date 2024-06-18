@@ -1,0 +1,73 @@
+.addBlogPage {
+    height: 80vh;
+    width: 90vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addBlog{
+    align-self: center;
+  }
+  
+  .blogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+    background-color: #ffffff1a;
+    padding: 5%;
+  }
+  
+  
+  .addBlogPage label {
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  
+  .addBlogPage .input,
+  .addBlogPage .textarea,
+  .addBlogPage .dropdown {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s, border 0.3s, box-shadow 0.3s, color 0.3s;
+    background: rgba(252, 252, 252, 0.149);
+    color: #9ba6ff;
+  }
+  
+  .addBlogPage .input:focus,
+  .addBlogPage .textarea:focus,
+  .addBlogPage .dropdown:focus {
+    background-color: rgba(75, 90, 199, 0.2);
+    transform: scale(1.05);
+    border: 2px solid #7a6ffd;
+    box-shadow: 0 0 15px #7a6ffd(75, 90, 199, 0.7);
+    color: #ffffff;
+  }
+  
+  .addBlogPage .textarea {
+    resize: vertical;
+    height: 100px;
+  }
+  
+  .addBlogPage .submitButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .addBlogPage .submitButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+  }
+  

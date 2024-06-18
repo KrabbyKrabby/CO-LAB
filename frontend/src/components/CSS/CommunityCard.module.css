@@ -23,13 +23,15 @@ body{
 
 }
   
-.CommunityCardSlider {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    z-index: 1;
-    color: rgb(255, 255, 255);
+.blogCardDescription {
+  max-width: 600px; /* Set your desired max width */
+  word-wrap: break-word; /* Ensure the text wraps within the max-width */
+  margin: 0 auto; /* Center the paragraph if needed */
+  padding: 10px; /* Add some padding for better readability */
+}
+
+.blogCardDescription{
+  max-width: 10px;
 }
 
 
@@ -113,4 +115,9 @@ body{
    text-decoration: none;
    font-weight: 500;
    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.image2{
+  width: 50px;
+  height: 50px;
 }

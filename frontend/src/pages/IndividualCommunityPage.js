@@ -10,10 +10,11 @@ import CommunityHeading from '../components/CommunityHeading';
 
 
 
-const IndividualCommunityPage = () => {
+const IndividualCommunityPage = ({ isLoggedIn, setIsLoggedIn, username, setUsername }) => {
     return (
       <div className={styles.CommunityPageContainer}>
-          <Navbar/>
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} username={username} setUsername={setUsername} />
+
           < CommunityHeading/>
       </div>
     );

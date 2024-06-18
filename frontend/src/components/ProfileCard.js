@@ -5,7 +5,7 @@ import whiteDownArrow from '../assets/white-down-arrow.png';
 import whiteUpArrow from '../assets/white-up-arrow.png';
 import pen from '../assets/pen.png';
 import saveIcon from '../assets/done.png';  // Assuming you have a save icon in your assets
-import ReactMarkdown from 'https://esm.sh/react-markdown@9'
+// import ReactMarkdown from 'https://esm.sh/react-markdown@9'
 
 const ProfileCard = ({ title,TechStack,ProfileInfo,handleEdit }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +62,7 @@ const ProfileCard = ({ title,TechStack,ProfileInfo,handleEdit }) => {
                 ProfileInfo ? (
                     <div className={style.profile_content}>
                         {isEditing ? (<textarea ref={inputRef} value={profileInfo} onChange={handleProfileInfoChange} className={style.profile_textarea}
-                        s />) : (<ReactMarkdown className={style.profile_info}>{profileInfo}</ReactMarkdown>)}
+                        s />) : (<div className={style.profile_info}>{profileInfo}</div>)}
                     </div>
                 ) : (TechStack && <div className={style.TechStackContainer}><TechStack /></div>)
             )}

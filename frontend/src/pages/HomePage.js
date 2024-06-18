@@ -8,12 +8,12 @@ import CommunityCard from '../components/CommunityCard'
 import image3 from '../assets/Saly-10.png'
 import image4 from '../assets/showcase your project text.png'
 import ProfileShowcaseCard from '../components/ProfileShowcaseCard'
-import javaLogo from '../assets/java_logo.png'
+import javaLogo from '../assets/java.png'
 import pythonLogo from '../assets/python_logo.png'
 import reactLogo from '../assets/React_logo.png'
 // import MorphingBackground from '../components/Background'
 
-const HomePage = () => {
+const HomePage = ({ isLoggedIn, setIsLoggedIn, username, setUsername }) => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -41,8 +41,7 @@ const HomePage = () => {
   return (
     <div className={styles.homePage}>
 
-      <Navbar/>
-      {/* <MorphingBackground/> */}
+    <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} username={username} setUsername={setUsername} />
       
 
 
@@ -63,9 +62,9 @@ const HomePage = () => {
         {/*  TODO link communities , also show top 3 popular community cards */}
         <h3>Join Communities</h3>
         <div className={styles.community_card_container}>
-          <CommunityCard communityName="Python Community" communityImageURL={pythonLogo}/>
-          <CommunityCard communityName="Java Community" communityImageURL={javaLogo}/>
-          <CommunityCard communityName="React Community" communityImageURL={reactLogo}/>
+          <CommunityCard communityName="Python" communityImageURL={pythonLogo}/>
+          <CommunityCard communityName="Java" communityImageURL={javaLogo}/>
+          <CommunityCard communityName="React" communityImageURL={reactLogo}/>
         </div>
       </div>
 
