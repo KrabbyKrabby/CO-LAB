@@ -30,6 +30,15 @@ const SignupCard = ({ setCredentials }) => {
     navigate('/login');
   };
 
+  const signup = async (userData) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Signup API called with:", userData);
+        resolve({ status: 201, data: { message: "User created successfully!" } });
+      }, 500);
+    });
+  };
+
   return (
     <div className={styles.signup_card}>
       <form className={styles.signup_form} onSubmit={handleSignup}>

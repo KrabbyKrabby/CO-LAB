@@ -25,6 +25,15 @@ const EditProjectDetailsPage = ({
     toggleEditing();
   };
 
+  const updateProject = async (projectId, projectData) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Update Project API called with:", projectId, projectData);
+        resolve({ status: 200, data: { message: "Project updated successfully!" } });
+      }, 500);
+    });
+  };
+
   return (
     <div className={styles.EditProjectDetailsPage}>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} username={username} setUsername={setUsername} />

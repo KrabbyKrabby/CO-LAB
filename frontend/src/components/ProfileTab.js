@@ -34,6 +34,15 @@ const ProfileTab = ({ onTabSelect, selectedTab, username, setCurrentProject }) =
     console.log('Add Blog clicked');
   };
 
+  const createProject = async (projectData) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Create Project API called with:", projectData);
+        resolve({ status: 201, data: { message: "Project created successfully!" } });
+      }, 500);
+    });
+  };
+
   return (
     <div className={styles.profile_tab}>
       <div className={styles.profile_info}>

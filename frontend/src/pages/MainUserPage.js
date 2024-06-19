@@ -33,6 +33,72 @@ const MainUserPage = ({ isLoggedIn, setIsLoggedIn, username, setUsername, projec
     navigate('/blog_details');
   }
 
+  const getProjects = async () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Get Projects API called");
+        resolve({
+          status: 200,
+          data: [
+            {
+              id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              username: "johndoe",
+              project_name: "Project 1",
+              project_description: "Description of Project 1",
+              features: ["Feature 1"],
+              tech_stack: ["React"],
+              github_link: "https://github.com/johndoe/project1",
+              youtube_link: "https://youtube.com/video1",
+              images: ["https://example.com/image1"],
+              associated_community: "React"
+            }
+          ]
+        });
+      }, 500);
+    });
+  };
+
+  const getProjectById = async (projectId) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Get Project by ID API called with:", projectId);
+        resolve({
+          status: 200,
+          data: {
+            id: projectId,
+            username: "johndoe",
+            project_name: "Project 1",
+            project_description: "Description of Project 1",
+            features: ["Feature 1"],
+            tech_stack: ["React"],
+            github_link: "https://github.com/johndoe/project1",
+            youtube_link: "https://youtube.com/video1",
+            images: ["https://example.com/image1"],
+            associated_community: "React"
+          }
+        });
+      }, 500);
+    });
+  };
+
+  const getBlogById = async (blogId) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Get Blog by ID API called with:", blogId);
+        resolve({
+          status: 200,
+          data: {
+            id: blogId,
+            username: "johndoe",
+            blog_title: "Blog 1",
+            blog_description: "Description of Blog 1",
+            associated_community: "React"
+          }
+        });
+      }, 500);
+    });
+  };
+
   return (
     <div className={style.mainuserpage_container}>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} username={username} setUsername={setUsername} />

@@ -23,6 +23,15 @@ const LoginCard = ({ setIsLoggedIn, setUsername, credentials }) => {
     }
   };
 
+  const login = async (credentials) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Login API called with:", credentials);
+        resolve({ status: 200, data: { token: "fake-jwt-token" } });
+      }, 500);
+    });
+  };
+
   return (
     <div className={styles.login_card}>
       <form className={styles.login_form} onSubmit={handleLogin}>

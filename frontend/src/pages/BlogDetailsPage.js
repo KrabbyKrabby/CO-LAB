@@ -18,6 +18,26 @@ const BlogDetailsPage = ({ isLoggedIn, username, currentBlog }) => {
     );
   }
 
+  const getBlogs = async () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log("Get Blogs API called");
+        resolve({
+          status: 200,
+          data: [
+            {
+              id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+              username: "johndoe",
+              blog_title: "Blog 1",
+              blog_description: "Description of Blog 1",
+              associated_community: "React"
+            }
+          ]
+        });
+      }, 500);
+    });
+  };
+
   return (
     <div className={styles.blogDetailsPage}>
       <Navbar isLoggedIn={isLoggedIn} username={username} />
